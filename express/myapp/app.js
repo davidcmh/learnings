@@ -12,6 +12,11 @@ app.get('/', function(req, res) {
     res.send('Hello World!');
 });
 
+// defines additional GET method for path /user
+app.get('/user', function(req, res) {
+    res.send('User says hello!');
+});
+
 var server = app.listen(3000, function() {
     var host = server.address().address;
     var port = server.address().port;
